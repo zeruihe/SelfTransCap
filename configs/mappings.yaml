@@ -1,0 +1,18 @@
+# configs/mappings.yaml
+
+# 将原始的'class'标签映射为更具描述性的病理学文本
+class_to_pathology:
+  "Normal": "normal, with no evidence of lung opacity or other abnormalities"
+  "Lung Opacity": "positive for lung opacity, indicative of pneumonia"
+  "No Lung Opacity / Not Normal": "abnormal findings are present, but there is no definitive lung opacity suggestive of pneumonia"
+
+# 定义一个3x3的网格，用于将边界框坐标转换为描述性位置
+# 图像尺寸假定为 1024x1024
+location_grid:
+  rows: 3
+  cols: 3
+  image_size: 1024
+  names:
+    - ["upper left", "upper middle", "upper right"]
+    - ["middle left", "central", "middle right"]
+    - ["lower left", "lower middle", "lower right"]

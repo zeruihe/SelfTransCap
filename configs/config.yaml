@@ -1,0 +1,20 @@
+# configs/config.yaml
+
+paths:
+  # 输入路径
+  class_info_csv: "data/raw/stage_2_detailed_class_info.csv"
+  labels_csv: "data/raw/stage_2_train_labels.csv"
+  image_dir: "data/raw/stage_2_train_images_png/" # 训练时加载器会使用
+  
+  # 输出路径
+  output_captions_csv: "outputs/data/image_captions.csv"
+
+llm:
+  provider: "openai"
+  model: "gpt-4-turbo-preview" # 推荐使用支持JSON模式的模型
+  temperature: 0.7 # 控制生成文本的创造性，0.7是一个平衡的选择
+  max_tokens: 512  # 限制单次API调用的最大输出长度
+
+generation:
+  num_captions_per_image: 5 # 为每张图片生成的描述数量
+  batch_size: 100 # 每批处理的图片数量，用于聚合数据

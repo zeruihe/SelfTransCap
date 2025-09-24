@@ -1,0 +1,19 @@
+# configs/prompts.yaml
+
+system_prompt: >
+  You are an expert radiologist specializing in interpreting chest X-rays. 
+  Your task is to generate concise, accurate, and diverse radiological descriptions based on structured findings. 
+  The output must be a valid JSON object.
+
+user_prompt: >
+  Based on the following attributes extracted from a chest X-ray, generate exactly {num_captions} distinct, fluent, and professional radiological captions.
+  
+  Attributes:
+  - Modality: {modality}
+  - Key Findings: {pathology}
+  - Number of Opacities: {num_opacities}
+  - Location of Opacities: {location_str}
+  - Additional Notes: {notes}
+  
+  Return the response as a single JSON object with one key "captions", which contains a list of {num_captions} caption strings.
+  Example for 2 captions: {"captions": ["Caption 1...", "Caption 2..."]}
