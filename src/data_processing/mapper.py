@@ -61,7 +61,8 @@ class AttributeMapper:
         
         # 按patientId聚合边界框信息
         bbox_agg = merged_df.dropna(subset=['x']).groupby('patientId').apply(
-            lambda group: group[['x', 'y', 'width', 'height']].to_dict('records')
+            lambda group: group[['x', 'y', 'width', 'height']].to_dict('records'),
+            include_groups=False
         ).reset_index(name='bboxes')
         
         # 获取每个patientId的唯一类别信息

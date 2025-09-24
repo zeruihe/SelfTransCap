@@ -16,4 +16,4 @@ user_prompt: >
   - Additional Notes: {notes}
   
   Return the response as a single JSON object with one key "captions", which contains a list of {num_captions} caption strings.
-  Example for 2 captions: {"captions": ["Caption 1...", "Caption 2..."]}
+  Example for 2 captions: {{"captions": ["Caption 1...", "Caption 2..."]}}
