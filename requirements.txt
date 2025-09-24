@@ -1,0 +1,33 @@
+# 核心数据处理库
+pandas>=1.5.0
+numpy>=1.21.0
+
+# 图像处理
+Pillow>=9.0.0
+
+# 深度学习框架
+torch>=1.12.0
+torchvision>=0.13.0
+
+# 配置文件处理
+PyYAML>=6.0
+
+# 进度条显示
+tqdm>=4.64.0
+
+# OpenAI API (如果使用OpenAI的LLM)
+openai>=1.0.0
+
+# 可选：如果需要使用其他LLM提供商
+# anthropic>=0.7.0  # 如果使用Claude
+# transformers>=4.21.0  # 如果使用Hugging Face模型
+# accelerate>=0.20.0  # 如果使用Hugging Face模型加速
+
+# 开发和调试工具 (可选)
+jupyter>=1.0.0
+matplotlib>=3.5.0
+seaborn>=0.11.0
+
+# 如果需要GPU支持，可以指定CUDA版本的PyTorch
+# torch>=1.12.0+cu116
+# torchvision>=0.13.0+cu116
